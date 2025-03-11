@@ -48,14 +48,14 @@ module.exports = {
                     for (let i = 0; i < userData.length; i++) {
                         setTimeout(async function timer() {
                             try {
-                                const groupInfo = await noblox[GroupType](
-                                    Number(userData[i].childData.groupId)
+                                const groupInfo = await noblox[GroupType]({groupId:
+                                    Number(userData[i].childData.groupId), accessFilter: 'All', sortOrder: 'Asc', limit: '100'}
                                 );
-                                console.log(groupInfo);
+                                console.log(userData[i].childData.groupId, groupInfo);
                                 getGroupGithub(groupInfo, GroupType);
-                            } catch {
+                            } catch (error) {
                                 console.log(
-                                    `Error getting group info for ${userData[i].childKey} [${userData[i].childData.groupId}.`
+                                    `Error getting getGroupGames info for ${userData[i].childKey} [${userData[i].childData.groupId}].`, error
                                 );
                             }
                             async function getGroupGithub(groupInfo, GroupType) {
