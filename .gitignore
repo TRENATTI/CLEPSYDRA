@@ -1,3 +1,4 @@
 .env
 ./Autoupdater/.env
 difference.txt
+node_modules
