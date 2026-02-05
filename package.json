@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "discord.js": "^14.25.1",
+    "dotenv": "^17.2.3",
+    "firebase-admin": "^13.6.1",
+    "noblox.js": "^6.2.0"
+  }
+}
